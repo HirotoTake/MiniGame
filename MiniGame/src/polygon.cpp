@@ -43,27 +43,7 @@ void C_POLYGON_2D::UpdateVtx() {
 		}
 
 	}
-	//テクスチャ非使用
-	/*
-	else {
-		for (int i = 0; i < 4; i++) {
-
-			m_vtx[i].diffuse = D3DCOLOR_ARGB((unsigned char)this->m_polygon2D.A, this->m_polygon2D.R, this->m_polygon2D.G, this->m_polygon2D.B);
-			m_vtx[i].rhw = 1.0f;
-
-			float dx = ((i % 2) * this->m_polygon2D.width - this->m_polygon2D.center.x);
-			float dy = ((i / 2) * this->m_polygon2D.height - this->m_polygon2D.center.y);
-
-			m_vtx[i].pos.x = this->m_polygon2D.pos.x + this->m_polygon2D.scale.x * (dx * c - dy * s);
-			m_vtx[i].pos.y = this->m_polygon2D.pos.y + this->m_polygon2D.scale.y * (dx * s + dy * c);
-			m_vtx[i].pos.z = 0.0f;
-
-			m_vtx[i].u = 0.0f;
-			m_vtx[i].v = 0.0f;
-
-		}
-		
-	}*/
+	
 }
 
 
@@ -77,7 +57,6 @@ void C_POLYGON_2D::UpdateVtx(VERTEX_2D * vtx){
 
 /*
 描画処理
-I / O : LPDIRECT3DTEXTURE9 pTex / void
 */
 void C_POLYGON_2D::Draw(){
 	g_pDevice = GetDevice();
